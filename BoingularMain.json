@@ -1,0 +1,13 @@
+{
+    "id": "BoingularAddons",
+    "name": "Boingular Addons",
+    "author": ["meluwudy"],
+    "description": "A collection of jokers suggested by my friends.",
+    "prefix": "boingular",
+    "main_file": "BoingularMain.lua",
+    "badge_colour": "FFC272",
+    "dependencies": [
+        "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "version": "1.0.0"
+}

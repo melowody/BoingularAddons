@@ -1,0 +1,23 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "most_played_poker_hand = 'High Card',"
+position = "after"
+payload = '''
+mel_true_clown_status = true
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "self.added_to_deck = true"
+position = "after"
+payload = '''
+check_for_unlock({type = 'add_card', args = self})
+'''
+match_indent = true
