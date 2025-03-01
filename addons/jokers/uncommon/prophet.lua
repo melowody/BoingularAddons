@@ -25,7 +25,7 @@ SMODS.Joker{
     blueprint_compat = true,
     calculate = function (self, card, context)
         if context.cardarea == G.play and context.individual then
-            --Stuff
+
         end
     end 
 }
