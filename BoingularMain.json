@@ -1,8 +1,8 @@
 {
     "id": "BoingularAddons",
     "name": "Boingular Addons",
-    "author": ["meluwudy"],
-    "description": "A collection of jokers suggested by my friends.",
+    "author": ["meluwudy, moonlightmari"],
+    "description": "holgy shit",
     "prefix": "boingular",
     "main_file": "BoingularMain.lua",
     "badge_colour": "FFC272",
