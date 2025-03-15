@@ -51,7 +51,7 @@ SMODS.Consumable {
 
         -- DESTROY THEM ALL!!!!
         for _, v in ipairs(lowest_cards) do
-            destroy(v, "82FF92", nil)
+            v:destroy("82FF92", nil)
         end
 
         -- Flip remaining cards around

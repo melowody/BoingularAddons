@@ -17,11 +17,11 @@ SMODS.Joker {
     blueprint_compat = false,
     calculate = function(self, card, context)
         if not context.game_over and not context.blueprint and not context.repetition and context.end_of_round then
-            destroy(card, "82FF92", nil)
+            card:destroy("82FF92", nil)
             for i = 1, #G.jokers.cards do
                 local curr_card = G.jokers.cards[i]
                 if curr_card.ability.eternal then
-                    destroy(curr_card, "82FF92", nil)
+                    curr_card:destroy("82FF92", nil)
                 end
             end
         end

@@ -2,24 +2,24 @@
 ---    FUNCTIONS    ---
 -----------------------
 
-function extinct(card, quote, sound)
+function Card:extinct(quote, sound)
     G.E_MANAGER:add_event(Event({
         func = function()
             if sound then
                 play_sound(sound)
             end
-            card.T.r = -0.2
-            card:juice_up(0.3, .4)
-            card.states.drag.is = true
-            card.children.center.pinch.x = true
+            self.T.r = -0.2
+            self:juice_up(0.3, .4)
+            self.states.drag.is = true
+            self.children.center.pinch.x = true
             G.E_MANAGER:add_event(Event({
                 trigger = 'after',
                 delay = 0.3,
                 blockable = false,
                 func = function()
-                    G.jokers:remove_card(card)
-                    card:remove()
-                    card = nil
+                    G.jokers:remove_card(self)
+                    self:remove()
+                    self = nil
                     return true;
                 end
             }))
@@ -33,91 +33,48 @@ function extinct(card, quote, sound)
     end
 end
 
--- Taken from https://stackoverflow.com/a/42062321
---  function print_table(node)
---     local cache, stack, output = {},{},{}
---     local depth = 1
---     local output_str = "{\n"
--- 
---     while true do
---         local size = 0
---         for k,v in pairs(node) do
---             size = size + 1
---         end
--- 
---         local cur_index = 1
---         for k,v in pairs(node) do
---             if (cache[node] == nil) or (cur_index >= cache[node]) then
--- 
---                 if (string.find(output_str,"}",output_str:len())) then
---                     output_str = output_str .. ",\n"
---                 elseif not (string.find(output_str,"\n",output_str:len())) then
---                     output_str = output_str .. "\n"
---                 end
--- 
---                 -- This is necessary for working with HUGE tables otherwise we run out of memory using concat on huge strings
---                 table.insert(output,output_str)
---                 output_str = ""
--- 
---                 local key
---                 if (type(k) == "number" or type(k) == "boolean") then
---                     key = "["..tostring(k).."]"
---                 else
---                     key = "['"..tostring(k).."']"
---                 end
--- 
---                 if (type(v) == "number" or type(v) == "boolean") then
---                     output_str = output_str .. string.rep('\t',depth) .. key .. " = "..tostring(v)
---                 elseif (type(v) == "table") then
---                     output_str = output_str .. string.rep('\t',depth) .. key .. " = {\n"
---                     table.insert(stack,node)
---                     table.insert(stack,v)
---                     cache[node] = cur_index+1
---                     break
---                 else
---                     output_str = output_str .. string.rep('\t',depth) .. key .. " = '"..tostring(v).."'"
---                 end
--- 
---                 if (cur_index == size) then
---                     output_str = output_str .. "\n" .. string.rep('\t',depth-1) .. "}"
---                 else
---                     output_str = output_str .. ","
---                 end
---             else
---                 -- close the table
---                 if (cur_index == size) then
---                     output_str = output_str .. "\n" .. string.rep('\t',depth-1) .. "}"
---                 end
---             end
--- 
---             cur_index = cur_index + 1
---         end
--- 
---         if (size == 0) then
---             output_str = output_str .. "\n" .. string.rep('\t',depth-1) .. "}"
---         end
--- 
---         if (#stack > 0) then
---             node = stack[#stack]
---             stack[#stack] = nil
---             depth = cache[node] == nil and depth + 1 or depth - 1
---         else
---             break
---         end
---     end
--- 
---     -- This is necessary for working with HUGE tables otherwise we run out of memory using concat on huge strings
---     table.insert(output,output_str)
---     output_str = table.concat(output)
--- 
---     print(output_str)
--- end
+function PRINT_TABLE( t )
+ 
+    local printTable_cache = {}
+ 
+    local function sub_printTable( t, indent )
+ 
+        if ( printTable_cache[tostring(t)] ) then
+            print( indent .. "*" .. tostring(t) )
+        else
+            printTable_cache[tostring(t)] = true
+            if ( type( t ) == "table" ) then
+                for pos,val in pairs( t ) do
+                    if ( type(val) == "table" ) then
+                        print( indent .. "[" .. pos .. "] => " .. tostring( t ).. " {" )
+                        sub_printTable( val, indent .. string.rep( " ", string.len(pos)+8 ) )
+                        print( indent .. string.rep( " ", string.len(pos)+6 ) .. "}" )
+                    elseif ( type(val) == "string" ) then
+                        print( indent .. "[" .. pos .. '] => "' .. val .. '"' )
+                    else
+                        print( indent .. "[" .. pos .. "] => " .. tostring(val) )
+                    end
+                end
+            else
+                print( indent..tostring(t) )
+            end
+        end
+    end
+ 
+    if ( type(t) == "table" ) then
+        print( tostring(t) .. " {" )
+        sub_printTable( t, "  " )
+        print( "}" )
+    else
+        sub_printTable( t, "  " )
+    end
+end
 
-function destroy(card, color, sound)
+function Card:destroy(color, sound)
     G.GAME.joker_buffer = G.GAME.joker_buffer - 1
     G.E_MANAGER:add_event(Event({func = function()
         G.GAME.joker_buffer = 0
-        card:start_dissolve({HEX(color)}, nil, 1.6)
+        self:start_dissolve({HEX(color)}, nil, 1.6)
         if sound then
             play_sound(sound, 0.96+math.random()*0.08)
         end

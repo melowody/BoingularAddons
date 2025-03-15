@@ -32,7 +32,7 @@ SMODS.Joker {
             local rand = pseudorandom("boingular_roulette")
             if rand < 1 / (G.GAME.probabilities.normal * card.ability.extra.odds) then
                 ease_dollars(-G.GAME.dollars, true)
-                extinct(card, "Blam!", nil)
+                card:extinct("Blam!", nil)
             else
                 return {
                     dollars = card.ability.extra.reward,

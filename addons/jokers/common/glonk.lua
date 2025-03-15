@@ -16,7 +16,7 @@ SMODS.Joker {
     blueprint_compat = false,
     calculate = function(self, card, context)
         if not context.game_over and not context.blueprint and not context.repetition and (context.end_of_round or context.ending_shop) then
-            return extinct(card, "Died", "tarot1")
+            return card:extinct("Died", "tarot1")
         end
     end
 }
