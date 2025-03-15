@@ -211,3 +211,5 @@ load_files_in_dir("addons/jokers")
 
 -- Load the Spectral Cards
 load_files_in_dir("addons/spectrals")
+
+load_files_in_dir("addons/editions")
