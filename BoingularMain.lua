@@ -159,6 +159,20 @@ SMODS.Atlas {
 	frames = 21,
 }
 
+SMODS.Atlas {
+    key = "BoingularSeals",
+    path = "Seals.png",
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = "BoingularTags",
+    path = "Tags.png",
+    px = 34,
+    py = 34
+}
+
 load_files_in_dir("addons/achievements")
 
 load_files_in_dir("addons/blinds")
@@ -170,3 +184,7 @@ load_files_in_dir("addons/jokers")
 load_files_in_dir("addons/spectrals")
 
 load_files_in_dir("addons/editions")
+
+load_files_in_dir("addons/seals")
+
+load_files_in_dir("addons/tags")

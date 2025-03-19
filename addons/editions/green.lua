@@ -25,7 +25,7 @@ SMODS.Edition {
     badge_colour = HEX("00FF00"),
     sound = {
         sound = "boingular_snd_green",
-        per = 1.2,
+        per = 1,
         vol = 0.4
     }
 }
