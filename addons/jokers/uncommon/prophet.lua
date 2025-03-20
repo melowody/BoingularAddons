@@ -3,10 +3,10 @@ SMODS.Joker{
     loc_txt = {
         name = "Prophet",
         text = {
-            "This Joker gains",
-            "0.5x Mult every time",
-            "a Spectral card is used",
-            "{C:inactive}(Currently X Mult){}"
+            "This {C:attention}Joker{} gains",
+            "{C:white,X:mult}X0.5{} Mult every time",
+            "a {C:spectral}Spectral{} card is used",
+            "{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult){}"
               }
     },
     rarity = 2,
@@ -17,15 +17,33 @@ SMODS.Joker{
     },
     config = {
         extra = {
+            multNum = 1
         },
     },
+    loc_vars = function(self, info_queue, card)
+        return {
+                vars = {
+                    card.ability.extra.multNum
+                }
+        }
+    end,
     cost = 5,
     eternal_compat = true,
     perishable_compat = true,
     blueprint_compat = true,
     calculate = function (self, card, context)
-        if context.cardarea == G.play and context.individual then
-
+        local total_spectrals = G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.spectral or 0
+        if context.using_consumeable and context.consumeable.ability.set == "Spectral" then
+            card.ability.extra.multNum = 1 + (total_spectrals * 0.5)
+            return {
+                message = "X" .. tostring(card.ability.extra.multNum),
+                colour = G.C.MULT
+            }
         end
-    end 
+        if context.cardarea == G.jokers and context.joker_main then
+            return{
+                xmult = card.ability.extra.multNum
+            }
+        end
+    end
 }
