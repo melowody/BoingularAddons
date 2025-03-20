@@ -1,9 +1,6 @@
 SMODS.Consumable {
     set = "Spectral",
     key = "artemis",
-    config = {
-        destroy_count = 3
-    },
     loc_txt = {
         name = "Artemis",
         text = {
@@ -15,21 +12,21 @@ SMODS.Consumable {
         }
     },
     loc_vars = function(self, info_queue, card)
-        return {vars = {(card.ability or self.config).destroy_count}}
+        return {vars = { math.max(0, G.hand and #G.hand.cards - 5 or 0) }}
     end,
     cost = 5,
     atlas = "BoingularSpectrals",
     pos = {x=0, y=0},
     soul_pos = {x=0, y=1},
     can_use = function(self, card)
-        return G.hand and #G.hand.cards >= 5 + self.config.destroy_count
+        return G.hand and #G.hand.cards >= 5
     end,
     use = function(self, card, area, _)
 
         -- Initialize variables
         local lowest_cards = {}
         local highest_cards = {}
-        local total_destroy = self.config.destroy_count
+        local total_destroy = #G.hand.cards - 5
         local suit_prefix = pseudorandom_element({'H', 'C', 'S', 'D'}, pseudoseed("boingular_sleuth"))
         local rank_prefixes = {'A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'}
         local total = #G.hand.cards

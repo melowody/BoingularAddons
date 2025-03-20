@@ -4,10 +4,17 @@ SMODS.Tag {
         label = "Blueprint Tag",
         name = "Blueprint Tag",
         text = {
-            "Shop has a {C;green}1 in 2{} chance",
+            "Shop has a {C:green}#1# in 2{} chance",
             "to spawn a {C:spectral}Blueprint Joker{}"
         }
     },
+    loc_vars = function (self, info_queue, tag)
+        return {
+            vars = {
+                G.GAME.probabilities.normal
+            }
+        }
+    end,
     atlas = "BoingularTags",
     pos = {
         x = 0,
@@ -22,7 +29,7 @@ SMODS.Tag {
             return nil
         end
 
-        if pseudorandom("blueprint_tag") < 0.5 then
+        if pseudorandom("blueprint_tag") > (G.GAME.probabilities.normal / 2) then
 
             tag:yep("Nope!", G.C.RED, function ()
                 return true
@@ -32,7 +39,7 @@ SMODS.Tag {
             return nil
         end
 
-        local key = (pseudorandom("blueprint_tag") < 0.066666) and "j_boingular_mcjoker" or "j_blueprint"
+        local key = (pseudorandom("blueprint_tag") < (G.GAME.probabilities.normal / 15)) and "j_boingular_mcjoker" or "j_blueprint"
 
         local card = SMODS.create_card({
             key = key,

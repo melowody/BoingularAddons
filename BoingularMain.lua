@@ -173,6 +173,8 @@ SMODS.Atlas {
     py = 34
 }
 
+load_files_in_dir("addons/hands")
+
 load_files_in_dir("addons/achievements")
 
 load_files_in_dir("addons/blinds")
