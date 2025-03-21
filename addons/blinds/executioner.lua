@@ -1,7 +1,3 @@
-local old_end_round = end_round
-function end_round()
-    old_end_round()
-end
 SMODS.Blind {
     key = "executioner_blind",
     loc_txt = {
@@ -18,13 +14,9 @@ SMODS.Blind {
             }
         }
     end,
-    collection_loc_vars = function (self)
-        return {
-            vars = {
-                "[most played hand]"
-            }
-        }
-    end,
+    vars = {
+        "[most played hand]"
+    },
     atlas = "BoingularBlinds",
     pos = { x = 0, y = 2 },
     mult = 2,
