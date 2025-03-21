@@ -1,16 +1,13 @@
 {
     "Lua.workspace.library": [
         "${addons}/love2d/module/library",
-        "E:/My Projects/Programs/Baltro/Lua/SMODSAddon/library",
+        "${3rd}/love2d/library",
         "E:/My Projects/Programs/Baltro/Lua/BalatroAddon/library",
-        "${3rd}/love2d/library"
+        "E:/My Projects/Programs/Baltro/Lua/SMODSAddon/library"
     ],
     "Lua.runtime.version": "LuaJIT",
     "Lua.runtime.special": {
         "love.filesystem.load": "loadfile"
     },
-    "Lua.workspace.checkThirdParty": true,
-    "Lua.workspace.userThirdParty": [
-        "E:/My Projects/Programs/Baltro/Lua"
-    ]
+    "Lua.workspace.checkThirdParty": true
 }
