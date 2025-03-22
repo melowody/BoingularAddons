@@ -31,9 +31,7 @@ SMODS.Tag {
 
         if pseudorandom("blueprint_tag") > (G.GAME.probabilities.normal / 2) then
 
-            tag:yep("Nope!", G.C.RED, function ()
-                return true
-            end)
+            tag:nope()
             tag.triggered = true
 
             return nil
