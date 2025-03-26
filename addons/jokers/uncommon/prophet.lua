@@ -11,10 +11,7 @@ SMODS.Joker{
     },
     rarity = 2,
     atlas = "BoingularJokers",
-    pos = {
-        x = 4,
-        y = 0
-    },
+    pos = {x = 4, y = 0},
     config = {
         extra = {
             multNum = 1
@@ -33,7 +30,7 @@ SMODS.Joker{
     blueprint_compat = true,
     calculate = function (self, card, context)
         local total_spectrals = G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.spectral or 0
-        if context.using_consumeable and context.consumeable.ability.set == "Spectral" then
+        if context.using_consumeable and context.consumeable.ability.set == "Spectral" and not context.blueprint then
             card.ability.extra.multNum = 1 + (total_spectrals * 0.5)
             return {
                 message = "X" .. tostring(card.ability.extra.multNum),

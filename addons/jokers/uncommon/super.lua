@@ -24,16 +24,19 @@ SMODS.Joker {
     end,
     rarity = 2,
     atlas = "BoingularJokers",
-    pos = {
-        x = 8,
-        y = 0
-    },
+    pos = {x = 8, y = 0},
     cost = 6,
     eternal_compat = true,
     perishable_compat = true,
     blueprint_compat = true,
     calculate = function (self, card, context)
         if context.joker_main and not context.repetition then
+            return {
+                mult = card.ability.extra.current
+            }
+        end
+
+        if context.joker_main and context.blueprint then
             return {
                 mult = card.ability.extra.current
             }

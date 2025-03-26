@@ -9,10 +9,7 @@ SMODS.Joker{
     },
     rarity = 3,
     atlas = "BoingularJokers",
-    pos = {
-        x = 7,
-        y = 0
-    },
+    pos = {x = 7, y = 0},
     config = {
         extra = {
         },

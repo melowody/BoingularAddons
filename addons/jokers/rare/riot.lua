@@ -3,8 +3,8 @@ SMODS.Joker {
     loc_txt = {
         name = "Riot Joker",
         text = {
-            "Destroys all {C:eternal}eternal{} jokers",
-            "then itself when round ends",
+            "{C:mult}Destroys{} all {C:eternal}eternal{C:attention} Jokers{}",
+            "then itself when {C:blue}round{} ends",
             "{C:inactive}Added by Marisa"
         }
     },

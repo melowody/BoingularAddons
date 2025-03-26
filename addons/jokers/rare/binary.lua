@@ -10,15 +10,12 @@ SMODS.Joker{
     },
     rarity = 3,
     atlas = "BoingularJokers",
-    pos = {
-        x = 9,
-        y = 0
-    },
+    pos = {x = 9, y = 0},
     config = {
         extra = {
             chips = 4,
             mult = 2,
-            decide = 1
+            decide = 0
         },
     },
     loc_vars = function(self, info_queue, card)
@@ -34,8 +31,10 @@ SMODS.Joker{
     perishable_compat = true,
     blueprint_compat = true,
     calculate = function (self, card, context)
-        if context.cardarea == G.jokers and context.joker_main then
+        if context.before and not context.blueprint then
             card.ability.extra.decide = card.ability.extra.decide + 1
+        end
+         if context.cardarea == G.jokers and context.joker_main then
           if card.ability.extra.decide % 2 == 0 then return {
                 colour = G.C.MULT,
                 xmult = card.ability.extra.mult

@@ -10,10 +10,7 @@ SMODS.Joker{
     },
     rarity = 2,
     atlas = "BoingularJokers",
-    pos = {
-        x = 5,
-        y = 0
-    },
+    pos = {x = 5, y = 0},
     config = {
         extra = {
             check = 20,
@@ -31,7 +28,7 @@ SMODS.Joker{
     cost = 5,
     eternal_compat = true,
     perishable_compat = true,
-    blueprint_compat = true,
+    blueprint_compat = false,
     add_to_deck = function (self, card, from_debuff)
 		G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.less_hands
     end,

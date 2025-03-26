@@ -32,3 +32,14 @@ payload = '''
 if #G.hand.highlighted <= 0 or G.GAME.blind.block_play then
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = "enhanced = G.C.SECONDARY_SET.Enhanced"
+position = "at"
+payload = '''
+enhanced = G.C.SECONDARY_SET.Enhanced,
+eternal = G.C.ETERNAL
+'''
+match_indent = true

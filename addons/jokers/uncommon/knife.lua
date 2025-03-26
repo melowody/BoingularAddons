@@ -21,10 +21,7 @@ SMODS.Joker {
               }
     },
     atlas = "BoingularJokers",
-    pos = {
-        x = 6,
-        y = 0
-    },
+    pos = {x = 6, y = 0},
     config = {
         extra = {
         },
