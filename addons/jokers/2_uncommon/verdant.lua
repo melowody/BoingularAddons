@@ -19,7 +19,7 @@ SMODS.Joker {
             for _, v in ipairs(context.scoring_hand) do
                 G.E_MANAGER:add_event(Event({
                     func = function()
-                        card:set_ability("e_boingular_green", nil, true)
+                        v:set_edition("e_boingular_green", nil, true)
                         v:juice_up()
                         return true
                     end
