@@ -5,7 +5,7 @@ SMODS.Seal {
         label = "Green Seal",
         text = {
             "Always counts this",
-            "card in scoring."
+            "card in scoring"
         }
     },
     atlas = "BoingularSeals",
