@@ -8,7 +8,7 @@ SMODS.Joker {
             "{C:inactive}Added by Mari"
         }
     },
-    rarity = 1,
+    rarity = 3,
     atlas = "BoingularJokers",
     pos = {x = 3, y = 0},
     cost = 10,

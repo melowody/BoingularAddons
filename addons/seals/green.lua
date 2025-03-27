@@ -15,8 +15,10 @@ SMODS.Seal {
     },
     badge_colour = HEX("38D41A"),
     calculate = function (self, card, context)
-        if context.before and context.cardarea == G.jokers then
-            
+        if context.modify_scoring_hand and context.other_card.seal == "boingular_green_seal" then
+            return {
+                add_to_hand = true
+            }
         end
     end
 }

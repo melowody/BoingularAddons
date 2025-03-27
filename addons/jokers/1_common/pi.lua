@@ -5,7 +5,8 @@ SMODS.Joker {
     loc_txt = {
         name = "Pi",
         text = {
-            "Grants {C:mult}+[next digit of Pi] Mult{}",
+            "Played cards give",
+            "{C:mult}+[next digit of pi] Mult{} when scored",
             "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult){}"
         }
     },
