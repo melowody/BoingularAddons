@@ -1,10 +1,11 @@
-print("Adding Achievement !!!!!!")
-
 SMODS.Achievement {
-    key = "true__clown",
+    key = "true_clown",
     loc_txt = {
         name = "A True Clown",
         description = {
+            "Complete a Gold Stake run without using any Jokers"
+        },
+        unlock = {
             "Complete a Gold Stake run without using any Jokers"
         }
     },
