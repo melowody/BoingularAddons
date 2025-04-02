@@ -3,7 +3,7 @@ SMODS.Joker {
     loc_txt = {
         name = "Whole Lotta Mult",
         text = {
-            "yada yada"
+            "yad"
         }
     },
     rarity = 1,
