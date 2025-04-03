@@ -6,7 +6,7 @@ SMODS.Joker {
             "This Joker gains",
             "{C:white,X:mult}+X0.15{} Mult when each",
             "played Ace is scored",
-            "{C:inactive}(Currently {C:white,X:mult}X0.15{C:inactive} Mult)"
+            "{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult)"
         }
     },
     rarity = 3,
@@ -14,13 +14,14 @@ SMODS.Joker {
     pos = {x = 5, y = 1},
     cost = 11,
     config = {
-        display_size = { w = 142, h = 190 },
-        pixel_size = { w = 71, h = 95 }
+        extra = {
+            mult = 1
+        }
     },
     loc_vars = function(self, info_queue, card)
         return {
                 vars = {
-
+                    card.ability.extra.mult
                 }
         }
     end,
@@ -28,9 +29,19 @@ SMODS.Joker {
     perishable_compat = true,
     blueprint_compat = true,
     calculate = function(self, card, context)
-        if context.joker_main and context.cardarea == G.jokers then
+        if context.individual and context.cardarea == G.play then
+            if context.other_card:get_id() == 14 then
+                card.ability.extra.mult = card.ability.extra.mult + 0.15
+                return {
+                    message = "Upgrade!",
+                    colour = G.C.ATTENTION,
+                    card = card
+                }
+            end
+        end
+        if context.cardarea == G.jokers and context.joker_main then
             return {
-                chips = 25
+                xmult = card.ability.extra.mult
             }
         end
     end
