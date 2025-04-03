@@ -11,7 +11,7 @@ SMODS.Joker {
     },
     rarity = 3,
     atlas = "BoingularJokers",
-    pos = {x = 5, y = 1},
+    pos = {x = 3, y = 1},
     cost = 11,
     config = {
         extra = {
