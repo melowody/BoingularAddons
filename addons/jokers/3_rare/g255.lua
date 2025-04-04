@@ -7,6 +7,9 @@ SMODS.Joker {
             "in play, Jokers or Playing Cards"
         }
     },
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.e_boingular_green
+    end,
     rarity = 3,
     atlas = "BoingularJokers",
     pos = {x = 3, y = 1},

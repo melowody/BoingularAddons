@@ -14,6 +14,9 @@ SMODS.Joker{
         extra = {
         },
     },
+    loc_vars = function (self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_stone
+    end,
     cost = 8,
     eternal_compat = true,
     perishable_compat = true,

@@ -15,7 +15,7 @@ SMODS.Edition {
         name = "Green",
         label = "Green",
         text = {
-            "Card is tinted Green"
+            "Card is tinted {C:green}Green"
         }
     },
     in_shop = true,
