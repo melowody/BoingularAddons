@@ -43,3 +43,44 @@ enhanced = G.C.SECONDARY_SET.Enhanced,
 eternal = G.C.ETERNAL
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "if text =='Straight Flush' then"
+position = "before"
+payload = '''
+if text == 'Pair' then
+    if scoring_hand[1]:get_id() == scoring_hand[2]:get_id() then
+        disp_text = "Snake Eyes"
+    end
+end
+'''
+match_indent = true
+
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "if text =='Straight Flush' then"
+position = "before"
+payload = '''
+print(scoring_hand[1]:get_id())
+if text == 'Pair' then
+    if scoring_hand[1]:get_id() == 13 and scoring_hand[2]:get_id() == 13 then
+        disp_text = "Yaoi"
+    end
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = 'disp_text = text'
+position = "after"
+payload = '''
+print(disp_text)
+print(scoring_hand[1]:get_id())
+'''
+match_indent = true
