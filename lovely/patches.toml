@@ -46,41 +46,66 @@ match_indent = true
 
 [[patches]]
 [patches.pattern]
-target = "functions/state_events.lua"
-pattern = "if text =='Straight Flush' then"
-position = "before"
+target = "conf.lua"
+pattern = "t.title = 'Balatro'"
+position = "at"
 payload = '''
-if text == 'Pair' then
-    if scoring_hand[1]:get_id() == scoring_hand[2]:get_id() then
-        disp_text = "Snake Eyes"
-    end
-end
-'''
-match_indent = true
-
-
-[[patches]]
-[patches.pattern]
-target = "functions/state_events.lua"
-pattern = "if text =='Straight Flush' then"
-position = "before"
-payload = '''
-print(scoring_hand[1]:get_id())
-if text == 'Pair' then
-    if scoring_hand[1]:get_id() == 13 and scoring_hand[2]:get_id() == 13 then
-        disp_text = "Yaoi"
-    end
-end
+t.title = 'boingulatro!'
 '''
 match_indent = true
 
 [[patches]]
 [patches.pattern]
-target = "functions/state_events.lua"
-pattern = 'disp_text = text'
-position = "after"
+target = "game.lua"
+pattern = "13*SC_scale,"
+position = "at"
 payload = '''
-print(disp_text)
-print(scoring_hand[1]:get_id())
+19*SC_scale, 
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '13*SC_scale*(G.ASSET_ATLAS["balatro"].py/G.ASSET_ATLAS["balatro"].px),'
+position = "at"
+payload = '''
+19*SC_scale*(G.ASSET_ATLAS["balatro"].py/G.ASSET_ATLAS["balatro"].px),
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "G.title_top.T.x = G.TILE_W/2 - G.title_top.T.w/2"
+position = "at"
+payload = '''
+G.title_top.T.x = G.TILE_W/2 - G.title_top.T.w/2 + G.TILE_W*0.165
+'''
+times = 2
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "G.SPLASH_LOGO:define_draw_steps({{"
+position = "before"
+payload = '''
+G.SPLASH_LOGO:set_alignment({
+    major = G.title_top,
+    type = 'cm',
+    bond = 'Strong',
+    offset = {x=-G.TILE_W*0.165,y=0}
+})
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = "local replace_card = Card(self.title_top.T.x, self.title_top.T.y, 1.2*G.CARD_W*SC_scale, 1.2*G.CARD_H*SC_scale, G.P_CARDS.S_A, G.P_CENTERS.c_base)"
+position = "at"
+payload = '''
+local replace_card = Card(self.title_top.T.x, self.title_top.T.y, 1.2*0.65*G.CARD_W*SC_scale, 1.2*0.65*G.CARD_H*SC_scale, G.P_CARDS.S_A, G.P_CENTERS.c_base)
 '''
 match_indent = true

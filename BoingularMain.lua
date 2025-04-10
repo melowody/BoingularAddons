@@ -177,6 +177,14 @@ SMODS.Atlas {
     py = 34
 }
 
+SMODS.Atlas{
+    key = "balatro",
+    path = "boingulatro.png",
+    px=1213,
+    py=144,
+    prefix_config = {key = false}
+}
+
 load_files_in_dir("addons/hands")
 
 load_files_in_dir("addons/achievements")

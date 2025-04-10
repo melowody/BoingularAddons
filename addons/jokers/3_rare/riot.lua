@@ -8,6 +8,9 @@ SMODS.Joker {
             "{C:inactive}Added by Marisa"
         }
     },
+    loc_vars = function (self, info_queue, card)
+        info_queue[#info_queue + 1] = {key = 'eternal', set = 'Other'}
+    end,
     rarity = 3,
     atlas = "BoingularJokers",
     pos = {x = 1, y = 0},

@@ -17,6 +17,7 @@ SMODS.Joker {
         }
     },
     loc_vars = function (self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.e_boingular_green
         return { vars = { card.ability.extra.add, card.ability.extra.current } }
     end,
     rarity = 1,

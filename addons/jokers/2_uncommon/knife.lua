@@ -17,7 +17,7 @@ SMODS.Joker {
         text = {
             "{C:chips}Chips{} value of last",
             "card used in scoring",
-            "is added to {C:mult}mult{} instead"
+            "is added to {C:mult}Mult{} instead"
               }
     },
     atlas = "BoingularJokers",
