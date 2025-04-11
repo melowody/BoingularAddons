@@ -3,15 +3,15 @@ SMODS.Joker {
     loc_txt = {
         name = "Problematically Large Joker",
         text = {
-            "This Joker gains",
+            "This {C:attention}Joker{} gains",
             "{C:white,X:mult}+X0.15{} Mult when each",
-            "played Ace is scored",
+            "played {C:attention}Ace{} is scored",
             "{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult)"
         }
     },
     rarity = 3,
     atlas = "BoingularJokers",
-    pos = {x = 3, y = 1},
+    pos = {x = 6, y = 1},
     cost = 11,
     config = {
         extra = {
