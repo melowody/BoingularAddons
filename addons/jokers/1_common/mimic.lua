@@ -10,13 +10,6 @@ SMODS.Joker {
     atlas = "BoingularJokers",
     pos = {x = 0, y = 2},
     cost = 2,
-    loc_vars = function(self, info_queue, card)
-        return {
-                vars = {
-
-                }
-        }
-    end,
     eternal_compat = true,
     perishable_compat = false,
     blueprint_compat = false,
