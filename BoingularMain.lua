@@ -2,6 +2,22 @@ SMODS.current_mod.optional_features = function()
     return { retrigger_joker = true }
 end
 
+SMODS.ConsumableType {
+    key = "BoingularAnacra",
+    primary_colour = HEX("FFFFFF"),
+    secondary_colour = HEX("618B31"),
+    loc_txt = {
+        name = "Anacra",
+        collection = "Anacra Cards",
+        undiscovered = {
+            name = "ah shit",
+            text = {
+                "ah shit"
+            }
+        }
+    }
+}
+
 -----------------------
 ---    FUNCTIONS    ---
 -----------------------
@@ -185,10 +201,30 @@ SMODS.Atlas{
     prefix_config = {key = false}
 }
 
+SMODS.Atlas{
+    key = "BoingularEnhancements",
+    path = "enhancements.png",
+    px=71,
+    py=95,
+}
+
+SMODS.Atlas {
+    key = "BoingularAnacra",
+    path = "reversetarot.png",
+    px=71,
+    py=95
+}
+
+-- Load the Custom Hands
 load_files_in_dir("addons/hands")
 
+-- Load the Achievements
 load_files_in_dir("addons/achievements")
 
+-- Load the Reverse Arcana
+load_files_in_dir("addons/anacra")
+
+-- Load the Blinds
 load_files_in_dir("addons/blinds")
 
 -- Load the Jokers
@@ -197,8 +233,14 @@ load_files_in_dir("addons/jokers")
 -- Load the Spectral Cards
 load_files_in_dir("addons/spectrals")
 
+-- Load the Editions
 load_files_in_dir("addons/editions")
 
+-- Load the Enhancements
+load_files_in_dir("addons/enhancements")
+
+-- Load the Seals
 load_files_in_dir("addons/seals")
 
+-- Load the Tags
 load_files_in_dir("addons/tags")

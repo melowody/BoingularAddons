@@ -4,9 +4,9 @@ SMODS.Seal {
         name = "Yellow Seal",
         label = "Yellow Seal",
         text = {
-            "Create a random Spectral card",
-            "if played in the last hand of a round",
-            "{C:inactive}Must have room"
+            "Create a random {C:spectral}Spectral{} card",
+            "if {C:attention}played{} in the {C:attention}last hand{} of a round",
+            "{C:inactive}(Must have room)"
         }
     },
     atlas = "BoingularSeals",
