@@ -15,7 +15,7 @@ SMODS.Joker {
     perishable_compat = false,
     blueprint_compat = false,
     calculate = function(self, card, context)
-        if not context.game_over and not context.blueprint and not context.repetition and (context.end_of_round or context.ending_shop) then
+        if not context.game_over and not context.blueprint and not context.repetition and (context.end_of_round or context.ending_shop) and context.cardarea == G.jokers then
             return card:extinct("Died", "tarot1")
         end
     end
