@@ -3,9 +3,9 @@ SMODS.Joker {
     loc_txt = {
         name = "Deadbeat",
         text = {
-            "Gains 1/2 the {C:chips}chips{} of",
+            "Gains 1/2 the {C:chips}Chips{} of",
             "every scored {C:hearts}Heart{} card",
-            "{C:inactive}Currently {C:chips}+#1#{C:inactive} chips"
+            "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)"
         }
     },
     rarity = 1,
