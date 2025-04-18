@@ -1,4 +1,4 @@
-SMODS.Blind {
+print [[SMODS.Blind {
     key = "sniper_blind",
     loc_txt = {
         name="The Sniper",
@@ -32,4 +32,4 @@ SMODS.Blind {
         end
         return true
 	end,
-}
+}]]
