@@ -9,7 +9,7 @@ SMODS.Joker{
             "{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult){}"
               }
     },
-    rarity = 2,
+    rarity = 3,
     atlas = "BoingularJokers",
     pos = {x = 4, y = 0},
     config = {
@@ -24,7 +24,7 @@ SMODS.Joker{
                 }
         }
     end,
-    cost = 5,
+    cost = 8,
     eternal_compat = true,
     perishable_compat = true,
     blueprint_compat = true,
