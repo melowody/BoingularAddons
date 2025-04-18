@@ -66,6 +66,18 @@ end
 ---    INIT    ---
 ------------------
 
+SMODS.Rarity {
+    key = "evil",
+    loc_txt = {
+        name = "Evil"
+    },
+    pools = {
+        ["Glonk"] = {rate = 1}
+    },
+    badge_colour = HEX("2F0000"),
+    default_weight = 0.5
+}
+
 load_file("BoingularFuncs.lua")
 
 -- Load the Atlases

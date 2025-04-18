@@ -7,7 +7,7 @@ SMODS.Joker {
             "{C:inactive}Added by zetex"
         }
     },
-    rarity = 1,
+    rarity = "boingular_evil",
     atlas = "BoingularJokers",
     pos = {x = 0, y = 0},
     cost = 0,
