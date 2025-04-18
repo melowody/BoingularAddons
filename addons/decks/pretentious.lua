@@ -9,8 +9,9 @@ SMODS.Back {
     loc_txt = {
         name = "Pretentious Deck",
         text = {
-            "Start with a Deck",
-            "with only {C:attention}face{} cards"
+            "Start run with",
+            "only {C:attention}Face{} Cards",
+            "in your deck"
         }
     },
     apply = function(self)

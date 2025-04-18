@@ -1,8 +1,8 @@
 SMODS.Enhancement {
     key = "bronze",
     loc_txt = {
-        name = "Bronze",
-        label = "Green Seal",
+        name = "Bronze Card",
+        label = "Bronze Card",
         text = {
             "{C:white,X:chips}X1.5{} Chips",
             "while this card",

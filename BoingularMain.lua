@@ -215,6 +215,41 @@ SMODS.Atlas {
     py=95
 }
 
+SMODS.Atlas {
+    key = "BoingularDecks",
+    path = "decks.png",
+    px=71,
+    py=95
+}
+
+SMODS.Atlas {
+    key = "LowRanks",
+    path = "8BitDeck_silly.png",
+    px=71,
+    py=95
+}
+
+SMODS.Atlas {
+    key = "LowRanks_HighCont",
+    path = "8BitDeck_silly_highCont.png",
+    px=71,
+    py=95
+}
+
+SMODS.Atlas {
+    key = "BoingularStarSuit",
+    path = "stars_suit.png",
+    px=71,
+    py=95
+}
+
+SMODS.Atlas {
+    key = "BoingularUI",
+    path = "ui.png",
+    px=18,
+    py=18
+}
+
 -- Load the Custom Hands
 load_files_in_dir("addons/hands")
 
@@ -226,6 +261,9 @@ load_files_in_dir("addons/anacra")
 
 -- Load the Blinds
 load_files_in_dir("addons/blinds")
+
+-- Load the Decks
+load_files_in_dir("addons/decks")
 
 -- Load the Jokers
 load_files_in_dir("addons/jokers")
@@ -239,8 +277,14 @@ load_files_in_dir("addons/editions")
 -- Load the Enhancements
 load_files_in_dir("addons/enhancements")
 
+-- Load the Ranks
+load_files_in_dir("addons/ranks")
+
 -- Load the Seals
 load_files_in_dir("addons/seals")
+
+-- Load the Suits
+load_files_in_dir("addons/suits")
 
 -- Load the Tags
 load_files_in_dir("addons/tags")
