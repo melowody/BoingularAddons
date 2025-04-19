@@ -98,3 +98,10 @@ SMODS.Atlas {
     px=18,
     py=18
 }
+
+SMODS.Atlas {
+    key = "BoingularRunes",
+    path = "Runes.png",
+    px=71,
+    py=95
+}

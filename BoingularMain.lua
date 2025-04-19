@@ -18,6 +18,23 @@ SMODS.ConsumableType {
     }
 }
 
+SMODS.ConsumableType {
+    key = "BoingularRunes",
+    primary_colour = HEX("FFFFFF"),
+    secondary_colour = HEX("8A54FF"),
+    loc_txt = {
+        name = "Runes",
+        collection = "Runes",
+        undiscovered = {
+            name = "ah shit",
+            text = {
+                "ah shit"
+            }
+        }
+    }
+}
+
+
 ------------------------------
 ---       FILE FUNCS       ---
 ------------------------------
@@ -78,6 +95,7 @@ SMODS.Rarity {
     default_weight = 0.5
 }
 
+--Load the Funcs :D
 load_file("BoingularFuncs.lua")
 
 -- Load the Atlases
@@ -112,6 +130,9 @@ load_files_in_dir("addons/enhancements")
 
 -- Load the Ranks
 load_files_in_dir("addons/ranks")
+
+-- Load the Runes
+load_files_in_dir("addons/runes")
 
 -- Load the Seals
 load_files_in_dir("addons/seals")
