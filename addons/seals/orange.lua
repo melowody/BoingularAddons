@@ -5,7 +5,7 @@ SMODS.Seal {
         label = "Orange Seal",
         text = {
             "Plays the card to the",
-            "right of this one instead"
+            "{C:attention}right{} of this one instead"
         }
     },
     atlas = "BoingularSeals",
@@ -17,7 +17,7 @@ SMODS.Seal {
     calculate = function (self, card, context)
         if context.modify_scoring_hand and context.other_card.seal == "boingular_orange_seal" then
             return {
-                add_to_hand = true
+
             }
         end
     end

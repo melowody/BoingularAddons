@@ -4,8 +4,8 @@ SMODS.Seal {
         name = "Green Seal",
         label = "Green Seal",
         text = {
-            "Always counts this",
-            "card in scoring"
+            "{C:attention}Always{} counts this",
+            "card in {C:attention}scoring{}"
         }
     },
     atlas = "BoingularSeals",
