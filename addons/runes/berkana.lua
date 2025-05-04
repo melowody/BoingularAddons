@@ -1,7 +1,7 @@
 SMODS.Consumable {
-    key = "Jera",
+    key = "Berkana",
     loc_txt = {
-        name = "Jera",
+        name = "Berkana",
         label = "uhhh yk",
         text = {
             "TBD"
@@ -9,5 +9,5 @@ SMODS.Consumable {
     },
     set = "BoingularRunes",
     atlas = "BoingularRunes",
-    pos = {x = 0, y = 0}
+    pos = {x = 0, y = 2}
 }
