@@ -2,9 +2,9 @@ SMODS.Consumable {
     key = "Berkana",
     loc_txt = {
         name = "Berkana",
-        label = "uhhh yk",
         text = {
-            "TBD"
+            "Grants the {C:attention}Chicot{} effect",
+            "for the current blind"
         }
     },
     set = "BoingularRunes",

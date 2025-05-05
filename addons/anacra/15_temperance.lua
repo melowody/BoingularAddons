@@ -2,7 +2,6 @@ SMODS.Consumable {
     key = "Temperance?",
     loc_txt = {
         name = "Temperance?",
-        label = "uhhh yk",
         text = {
             "TBD"
         }

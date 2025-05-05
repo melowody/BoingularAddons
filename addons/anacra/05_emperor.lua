@@ -1,13 +1,12 @@
 SMODS.Consumable {
-    key = "The Empress?",
+    key = "The Emperor?",
     loc_txt = {
-        name = "The Empress?",
-        label = "uhhh yk",
+        name = "The Emperor?",
         text = {
             "TBD"
         }
     },
     set = "BoingularAnacra",
     atlas = "BoingularAnacra",
-    pos = {x = 3, y = 0}
+    pos = {x = 4, y = 0}
 }

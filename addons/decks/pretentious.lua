@@ -10,7 +10,7 @@ SMODS.Back {
         name = "Pretentious Deck",
         text = {
             "Start run with",
-            "only {C:attention}Face{} Cards",
+            "only {C:attention}Face Cards{}",
             "in your deck"
         }
     },

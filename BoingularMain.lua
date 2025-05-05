@@ -6,13 +6,17 @@ SMODS.ConsumableType {
     key = "BoingularAnacra",
     primary_colour = HEX("FFFFFF"),
     secondary_colour = HEX("618B31"),
+    collection_rows = { 5, 6 },
     loc_txt = {
         name = "Anacra",
         collection = "Anacra Cards",
         undiscovered = {
-            name = "ah shit",
+            name = "Not Discovered",
             text = {
-                "ah shit"
+                "Purchase or use",
+                "this card in an",
+                "unseeded run to",
+                "learn what it does"
             }
         }
     }
@@ -22,18 +26,33 @@ SMODS.ConsumableType {
     key = "BoingularRunes",
     primary_colour = HEX("FFFFFF"),
     secondary_colour = HEX("8A54FF"),
+    collection_rows = { 5, 5, 5 },
     loc_txt = {
-        name = "Runes",
-        collection = "Runes",
+        name = "Rune",
+        collection = "Rune Cards",
         undiscovered = {
-            name = "ah shit",
+            name = "Not Discovered",
             text = {
-                "ah shit"
+                "Purchase or use",
+                "this card in an",
+                "unseeded run to",
+                "learn what it does"
             }
         }
     }
 }
 
+SMODS.UndiscoveredSprite {
+    key = "BoingularRunes",
+    atlas = "BoingularRunes",
+    pos = {x = 0, y = 3}
+}
+
+SMODS.UndiscoveredSprite {
+    key = "BoingularAnacra",
+    atlas = "BoingularAnacra",
+    pos = {x = 6, y = 2}
+}
 
 ------------------------------
 ---       FILE FUNCS       ---
