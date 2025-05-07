@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "The High Priestess?",
         text = {
-            "TBD"
+            "Creates {C:attention}1{} random",
+            "{C:spectral}Spectral{} card",
+            "{C:inactive}(Must have room)"
         }
     },
     set = "BoingularAnacra",

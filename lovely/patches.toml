@@ -40,9 +40,34 @@ pattern = "enhanced = G.C.SECONDARY_SET.Enhanced"
 position = "at"
 payload = '''
 enhanced = G.C.SECONDARY_SET.Enhanced,
-eternal = G.C.ETERNAL
+eternal = G.C.ETERNAL,
+rune = G.C.BOINGULAR_RUNE,
+anacra = G.C.BOINGULAR_ANACRA,
+orange = G.C.ORANGE,
+yellow = G.C.YELLOW,
+offense = G.C.BOINGULAR_OFFENSE_RUNE,
+defense = G.C.BOINGULAR_DEFENSE_RUNE,
+life = G.C.BOINGULAR_LIFE_RUNE
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "globals.lua"
+pattern = "RENTAL = HEX('b18f43'),"
+position = "at"
+payload = '''
+RENTAL = HEX('b18f43'),
+BOINGULAR_RUNE = HEX('8A54FF'),
+BOINGULAR_ANACRA = HEX('618B31'),
+ORANGE = HEX('EB8F1E'),
+YELLOW = HEX('DDDD1C'),
+BOINGULAR_OFFENSE_RUNE = HEX('C483A5'),
+BOINGULAR_DEFENSE_RUNE = HEX('A37BE5'),
+BOINGULAR_LIFE_RUNE = HEX('73DF7B'),
+'''
+match_indent = true
+
 
 [[patches]]
 [patches.pattern]

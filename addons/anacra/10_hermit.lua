@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Hermit?",
         text = {
-            "Lose {C:green}$10"
+            "Converts {C:attention}2{} selected",
+            "cards in hand into {C:green}money",
+            "{s:0.8,C:dark_edition}Enhancements{s:0.8}/{s:0.8,C:dark_edition}Editions{s:0.8} give more money"
         }
     },
     set = "BoingularAnacra",

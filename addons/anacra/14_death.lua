@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "Death?",
         text = {
-            "TBD"
+            "Converts next {C:attention}Boss Blind{} into",
+            "most recently defeated {C:attention}Boss Blind{}",
+            "{C:inactive}(Does not work on {C:attention}Finisher Blinds{C:inactive})"
         }
     },
     set = "BoingularAnacra",

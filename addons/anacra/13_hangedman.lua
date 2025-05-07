@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Hanged Man?",
         text = {
-            "TBD"
+            "Add {C:attention}2{} random",
+            "{C:attention}non-enhanced, edition-less{}",
+            "cards to your hand"
         }
     },
     set = "BoingularAnacra",

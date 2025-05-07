@@ -3,7 +3,11 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Fool?",
         text = {
-            "TBD"
+            "Creates the last",
+            "{C:anacra}Anacra{} or {C:rune}Rune{} card",
+            "used during this run",
+            "{s:0.8,C:anacra}The Fool?{s:0.8} excluded",
+            "{C:white,X:red}[most recently used card]"
         }
     },
     set = "BoingularAnacra",

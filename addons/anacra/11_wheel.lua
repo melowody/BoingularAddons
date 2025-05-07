@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Wheel of Fortune?",
         text = {
-            "TBD"
+            "{C:green}1 in 8{} chance to add",
+            "{C:dark_edition}Negative{} edition",
+            "to all cards in hand"
         }
     },
     set = "BoingularAnacra",

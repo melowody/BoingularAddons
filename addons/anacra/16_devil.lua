@@ -3,7 +3,8 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Devil?",
         text = {
-            "TBD"
+            "Enhances {C:attention}2{} selected",
+            "cards into {C:attention}Brittle Cards"
         }
     },
     set = "BoingularAnacra",

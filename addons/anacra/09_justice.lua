@@ -3,7 +3,8 @@ SMODS.Consumable {
     loc_txt = {
         name = "Justice?",
         text = {
-            "TBD"
+            "Creates {C:attention}1 {C:offense}offense {C:rune}rune",
+            "{C:inactive}(Must have room)"
         }
     },
     set = "BoingularAnacra",

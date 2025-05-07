@@ -3,7 +3,8 @@ SMODS.Consumable {
     loc_txt = {
         name = "Temperance?",
         text = {
-            "TBD"
+            "{C:green}1 in 4{} chance all cards give {C:green}$3",
+            "{C:green}1 in 8{} chance to {C:attention}destroy{} the card"
         }
     },
     set = "BoingularAnacra",

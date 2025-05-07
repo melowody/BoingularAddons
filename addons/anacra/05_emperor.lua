@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Emperor?",
         text = {
-            "TBD"
+            "Creates up to {C:attention}2{}",
+            "random {C:anacra}Anacra{} cards",
+            "{C:inactive}(Must have room)"
         }
     },
     set = "BoingularAnacra",

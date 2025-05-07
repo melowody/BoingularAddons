@@ -3,7 +3,9 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Lovers?",
         text = {
-            "TBD"
+            "Converts {C:attention}2{} cards in hand",
+            "to a single random {C:attention}rank{}",
+            "but 2 {C:attention}different{} suits"
         }
     },
     set = "BoingularAnacra",
