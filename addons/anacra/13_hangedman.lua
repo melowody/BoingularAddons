@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "The Hanged Man?",
+    key = "reverse_hanged",
     loc_txt = {
         name = "The Hanged Man?",
         text = {

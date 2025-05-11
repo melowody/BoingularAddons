@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "The High Priestess?",
+    key = "reverse_priestess",
     loc_txt = {
         name = "The High Priestess?",
         text = {

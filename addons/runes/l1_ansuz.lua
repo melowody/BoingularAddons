@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "Ansuz",
+    key = "ansuz",
     loc_txt = {
         name = "Ansuz",
         text = {
@@ -7,7 +7,11 @@ SMODS.Consumable {
             "the current shop {C:attention}free"
         }
     },
+    cost = 4,
     set = "BoingularRunes",
     atlas = "BoingularRunes",
-    pos = {x = 0, y = 1}
+    pos = {x = 0, y = 1},
+    pools = {
+        ["boingular_life_rune"] = true
+        },
 }

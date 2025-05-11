@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "Strength?",
+    key = "reverse_strength",
     loc_txt = {
         name = "Strength?",
         text = {

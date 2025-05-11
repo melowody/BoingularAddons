@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "The Fool?",
+    key = "reverse_fool",
     loc_txt = {
         name = "The Fool?",
         text = {

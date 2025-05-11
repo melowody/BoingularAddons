@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "Eihwaz",
+    key = "eihwaz",
     loc_txt = {
         name = "Eihwaz",
         text = {
@@ -7,7 +7,11 @@ SMODS.Consumable {
             "for the current blind"
         }
     },
+    cost = 4,
     set = "BoingularRunes",
     atlas = "BoingularRunes",
-    pos = {x = 4, y = 0}
+    pos = {x = 4, y = 0},
+    pools = {
+        ["boingular_off_rune"] = true
+        },
 }

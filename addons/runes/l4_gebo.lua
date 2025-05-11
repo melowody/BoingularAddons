@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "Gebo",
+    key = "gebo",
     loc_txt = {
         name = "Gebo",
         text = {
@@ -7,7 +7,11 @@ SMODS.Consumable {
             "to the current shop"
         }
     },
+    cost = 4,
     set = "BoingularRunes",
     atlas = "BoingularRunes",
-    pos = {x = 3, y = 1}
+    pos = {x = 3, y = 1},
+    pools = {
+        ["boingular_life_rune"] = true
+        },
 }

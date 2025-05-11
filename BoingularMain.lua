@@ -54,6 +54,17 @@ SMODS.UndiscoveredSprite {
     pos = {x = 6, y = 2}
 }
 
+SMODS.ObjectType {
+    key = "boingular_off_rune"
+}
+
+SMODS.ObjectType {
+    key = "boingular_life_rune"
+}
+
+SMODS.ObjectType {
+    key = "boingular_def_rune"
+}
 ------------------------------
 ---       FILE FUNCS       ---
 ------------------------------

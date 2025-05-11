@@ -15,9 +15,7 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     blueprint_compat = false,
-    calculate = function(self, card, context)
-        if context.cardarea == G.jokers and context.joker_main then
-
-        end
+    add_to_deck = function(self, card, from_debuff)
+        G.consumeables.config.card_limit = 25
     end
 }

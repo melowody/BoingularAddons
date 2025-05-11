@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = "The Magician?",
+    key = "reverse_magician",
     loc_txt = {
         name = "The Magician?",
         text = {
@@ -38,6 +38,4 @@ SMODS.Consumable {
         G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.2,func = function() G.hand:unhighlight_all(); return true end }))
         delay(0.5)
     end
-
-    
 }
