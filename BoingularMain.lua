@@ -2,6 +2,18 @@ SMODS.current_mod.optional_features = function()
     return { retrigger_joker = true }
 end
 
+local old_Game_start_run = Game.start_run
+function Game:start_run(args)
+        local old = old_Game_start_run(self, args)
+        self.rune_area = CardArea(
+            -500, 0,
+            2.3*G.CARD_W,
+            0.95*G.CARD_H,
+            {card_limit = 50000, type = 'joker', highlight_limit = 0}
+        )
+        return old
+end
+
 SMODS.ConsumableType {
     key = "BoingularAnacra",
     primary_colour = HEX("FFFFFF"),

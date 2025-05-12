@@ -10,5 +10,26 @@ SMODS.Consumable {
     },
     set = "BoingularAnacra",
     atlas = "BoingularAnacra",
-    pos = {x = 5, y = 2}
+    pos = {x = 5, y = 2},
+
+    can_use = function (self, card)
+        if #G.consumeables.cards <= G.consumeables.config.card_limit or self.area == G.consumeables then
+        return true
+        end
+    end,
+
+    use = function (self, card, area, copier)
+        for i = 1, math.min(1, G.consumeables.config.card_limit - #G.consumeables.cards) do
+            G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.4, func = function()
+                if G.consumeables.config.card_limit >= #G.consumeables.cards then
+                    play_sound('timpani')
+                    local card = create_card('Joker', G.consumeables, nil, nil, nil, nil, 'j_ring_master', 'jud')
+                    card:add_to_deck()
+                    G.consumeables:emplace(card)
+                    card:juice_up(0.3, 0.5)
+                end
+                return true end }))
+        end
+        delay(0.6)
+    end
 }
