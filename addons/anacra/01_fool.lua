@@ -2,6 +2,8 @@ SMODS.Consumable {
     key = "reverse_fool",
     loc_txt = {
         name = "The Fool?",
+        --todo, make bottom line of text more accurate to c_fool
+            --drop shadow, curved red background, etc
         text = {
             "Creates the last",
             "{C:anacra}Anacra{} or {C:rune}Rune{} card",
