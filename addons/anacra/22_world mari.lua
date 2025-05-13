@@ -23,8 +23,10 @@ SMODS.Consumable {
             G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.4, func = function()
                 if G.consumeables.config.card_limit >= #G.consumeables.cards then
                     play_sound('timpani')
-                    local card = create_card('Joker', G.consumeables, nil, nil, nil, nil, 'j_ring_master', 'jud')
+                    local card2 = create_card('Joker', G.rune_area, nil, nil, nil, nil, 'j_ring_master', 'jud')
+                    local card = create_card('Joker', G.consumeables, nil, nil, nil, nil, 'j_wrathful_joker', 'jud')
                     card:add_to_deck()
+                    G.rune_area:emplace(card2)
                     G.consumeables:emplace(card)
                     card:juice_up(0.3, 0.5)
                 end

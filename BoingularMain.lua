@@ -4,14 +4,25 @@ end
 
 local old_Game_start_run = Game.start_run
 function Game:start_run(args)
-        local old = old_Game_start_run(self, args)
         self.rune_area = CardArea(
-            -500, 0,
+            0, 0,
             2.3*G.CARD_W,
             0.95*G.CARD_H,
-            {card_limit = 50000, type = 'joker', highlight_limit = 0}
+            {card_limit = 10, type = 'joker', highlight_limit = 1}
         )
+        local old = old_Game_start_run(self, args)
         return old
+end
+
+local old_find_joker = find_joker
+function find_joker(name, non_debuff)
+    local jokers = old_find_joker(name, non_debuff)
+  for k, v in pairs(G.rune_area.cards) do
+    if v and type(v) == 'table' and v.ability.name == name and (non_debuff or not v.debuff) then
+      table.insert(jokers, v)
+    end
+  end
+  return jokers
 end
 
 SMODS.ConsumableType {

@@ -138,3 +138,13 @@ if (boingular_replace_card < 0.05) then
 end
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/utils.lua"]'
+pattern = '-- TARGET: add your own CardAreas for joker evaluation'
+position = "after"
+payload = '''
+table.insert(t, G.rune_area)
+'''
+match_indent = true
