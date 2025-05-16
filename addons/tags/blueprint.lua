@@ -16,10 +16,7 @@ SMODS.Tag {
         }
     end,
     atlas = "BoingularTags",
-    pos = {
-        x = 0,
-        y = 0
-    },
+    pos = {x = 0, y = 3},
     config = {
         type = "store_joker_create"
     },
