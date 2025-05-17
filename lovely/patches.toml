@@ -159,3 +159,15 @@ if G.rune_area.cards then remove_all(G.rune_area.cards) end
 G.rune_area.cards = {}
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = "function Game:update_shop(dt)"
+position = "after"
+payload = '''
+for i = 1, #G.GAME.tags do
+    G.GAME.tags[i]:apply_to_run({type = 'boingular_update_shop'})
+end
+'''
+match_indent = true

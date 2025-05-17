@@ -12,13 +12,11 @@ SMODS.Tag {
     yes_pool_flag = 'rune_effects',
     atlas = "BoingularTags",
     pos = {x = 0, y = 1},
-    config = {
-        type = "boinglar_update_shop"
-    },
     apply = function (self, tag, context)
         print(context.type)
-        if context.type == 'shop_final_pass' or (context.type == 'immediate' and not not G.shop_jokers and not not G.shop_booster) then
+        if context.type == 'shop_final_pass' or (context.type == 'boingular_update_shop' and not not G.shop_jokers and not not G.shop_booster and G.STATE_COMPLETE) then
                 if G.shop and not G.shop_free then
+                    G.STATE_COMPLETE = false
                     G.GAME.shop_free = true
                     tag:yep('Ansuz!', G.C.BOINGULAR_LIFE_RUNE ,function()
                         if G.shop_jokers and G.shop_booster then
