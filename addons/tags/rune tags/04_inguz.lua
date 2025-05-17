@@ -8,6 +8,8 @@ SMODS.Tag {
             "during the next {C:attention}blind{}"
         }
     },
+    no_collection = true,
+    yes_pool_flag = 'rune_effects',
     atlas = "BoingularTags",
     pos = {x = 3, y = 2},
     config = {

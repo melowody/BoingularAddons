@@ -148,3 +148,14 @@ payload = '''
 table.insert(t, G.rune_area)
 '''
 match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/state_events.lua'
+pattern = "if G.GAME.round_resets.ante == G.GAME.win_ante and G.GAME.blind:get_type() == 'Boss' then"
+position = "before"
+payload = '''
+if G.rune_area.cards then remove_all(G.rune_area.cards) end
+G.rune_area.cards = {}
+'''
+match_indent = true

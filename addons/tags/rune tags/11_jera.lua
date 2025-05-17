@@ -8,16 +8,22 @@ SMODS.Tag {
             "during the next {C:attention}blind{}"
         }
     },
+    no_collection = true,
+    yes_pool_flag = 'rune_effects',
     atlas = "BoingularTags",
     pos = {x = 0, y = 0},
     config = {
-        type = ""
+        type = "round_start_bonus"
     },
     apply = function (self, tag, context)
-        tag.triggered = true
+        if context.type == 'round_start_bonus' then
+        tag:yep("Jera!", G.C.BOINGULAR_OFFENSE_RUNE, function()
         play_sound('timpani')
-        local card = create_card('Joker', G.rune_area, nil, nil, nil, nil, 'j_boingular_jera_effect', nil)
-        card:add_to_deck()
-        G.rune_area:emplace(card)
+        ease_hands_played(3)
+        ease_discard(3)
+        tag.triggered = true
+        return true
+        end)
     end
+end
 }
