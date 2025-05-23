@@ -17,6 +17,7 @@ end
 local old_find_joker = find_joker
 function find_joker(name, non_debuff)
     local jokers = old_find_joker(name, non_debuff)
+    if not G.rune_area then return jokers end
   for k, v in pairs(G.rune_area.cards) do
     if v and type(v) == 'table' and v.ability.name == name and (non_debuff or not v.debuff) then
       table.insert(jokers, v)
@@ -153,6 +154,9 @@ load_file("BoingularFuncs.lua")
 
 -- Load the Atlases
 load_file("addons/atlas.lua")
+
+-- Load the Boosters
+load_files_in_dir("addons/boosters")
 
 -- Load the Custom Hands
 load_files_in_dir("addons/hands")

@@ -108,7 +108,14 @@ SMODS.Atlas {
 
 SMODS.Atlas {
     key = "modicon",
+    path = "modicon.png",
     px = 32,
-    py = 32,
-    path = "modicon.png"
+    py = 32
+  }
+
+  SMODS.Atlas {
+    key = "BoingularBoosters",
+    path = "boosters.png",
+    px=71,
+    py=95
   }
